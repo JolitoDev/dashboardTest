@@ -1,9 +1,26 @@
-div {
-  background-color: gray;
-  padding: 1em;
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  gap: 30px 40px;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.item:nth-of-type(4) {
+  background-color: lightcoral;
+  display: -ms-grid;
+  display: grid;
 }
 
 body {
-  background-color: salmon;
+  font-family: Arial;
 }
 /*# sourceMappingURL=style.css.map */
