@@ -1,9 +1,14 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100%;
+    grid-template: 100px 1fr 150px/200px 1fr;
     gap: 30px 40px;
+    height: 100vh;
+    grid-template-areas: "header header" 
+                         "left contenido"
+                         "footer footer";
+    
 }
+
 .item {
     background-color: lightblue;
     padding: 10px;
@@ -14,7 +19,22 @@
     background-color: lightcoral;
     display: grid;
 }
+.header{
+    grid-area: header;
 
+}
+.left{
+    grid-area: left;
+
+}
+.contenido{
+    grid-area: contenido;
+
+}
+.footer{
+    grid-area: footer;
+
+}
 body{
     font-family: Arial;
 }
