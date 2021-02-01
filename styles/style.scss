@@ -1,0 +1,80 @@
+// ordenando en variables los assets que necesitaremos en el dashboard
+
+// FONTS
+
+
+$font-logo: 'Great Vibes', cursive;
+$font-header: 'Oswald', sans-serif;
+$font-primary: 'Roboto', sans-serif;
+
+// COLORS
+
+$color-purple:#5758BB;
+$color-darkgrey:#2f3640;
+
+// LOGO
+
+.logo{
+    font-family: $font-logo;
+    color: white;
+    font-size: 70px;
+    margin: 0;
+    
+}
+// style of the  headear
+.header-text {
+    font-family: $font-header;
+    
+}
+
+// style of the Paragraph
+
+
+.container {
+    display: grid;
+    grid-template: 100px 1fr 150px/200px 1fr;
+    gap: 30px 40px;
+    height: 100vh;
+    grid-template-areas: "header header" 
+                         "left contenido"
+                         "footer footer";
+    
+}
+// background image
+body {
+    background-image: url(/img/fondoprueba.jpg);
+  
+
+}
+.item {
+    opacity: .5;
+    padding: 10px;
+    border: 1px solid red;
+    
+
+}
+/*.item:nth-of-type(4){
+    background-color: $color-darkgrey;
+    display: grid;
+}*/
+.header{
+    grid-area: header;
+    
+    
+
+}
+.left{
+    grid-area: left;
+    font-family: $font-primary;
+}
+.contenido{
+    grid-area: contenido;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 30px 40px;
+
+}
+.footer{
+    grid-area: footer;
+
+}

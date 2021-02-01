@@ -1,3 +1,14 @@
+.logo {
+  font-family: "Great Vibes", cursive;
+  color: white;
+  font-size: 70px;
+  margin: 0;
+}
+
+.header-text {
+  font-family: "Oswald", sans-serif;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -9,14 +20,18 @@
       grid-template-areas: "header header"  "left contenido" "footer footer";
 }
 
+body {
+  background-image: url(/img/fondoprueba.jpg);
+}
+
 .item {
-  background-color: lightblue;
+  opacity: .5;
   padding: 10px;
   border: 1px solid red;
 }
 
 .item:nth-of-type(4) {
-  background-color: lightcoral;
+  background-color: #2f3640;
   display: -ms-grid;
   display: grid;
 }
@@ -32,12 +47,19 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: left;
+  font-family: "Roboto", sans-serif;
 }
 
 .contenido {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: contenido;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  gap: 30px 40px;
 }
 
 .footer {
@@ -46,8 +68,4 @@
   -ms-grid-column-span: 2;
   grid-area: footer;
 }
-
-body {
-  font-family: Arial;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
